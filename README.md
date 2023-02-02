@@ -24,12 +24,12 @@ We first explain our kinked Donut Regression Discontinuity design approach using
 #### Estimate kinked Donut  RDD
 
 The figure shows the data and estimated slopes for set bandwidth. 
-s
+
 <img src="./_simulation/simulation_figure.png" height="300">
 
 #### Some STATA estimation command 
 
-Here is the Stata script (see also simulation folder):
+Here is an exemplary Stata script (see also simulation folder):
 
 ```stata
 * Estimate OLS 
@@ -69,9 +69,11 @@ di upper_triang
 
 Here we collect all do-files and data used in our analysis. We do not repost the full dataset as these were too large for the Github repository, please contact us if you have issues replicating it. 
 
+*These will be added shortly.*
+
 ## Data access
 
-Has to be applied via ... 
+*Description will be added shortly.*
 
 ## Update History
 * **February 3, 2023**
