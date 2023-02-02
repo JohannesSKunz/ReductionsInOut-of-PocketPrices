@@ -24,10 +24,8 @@ We first explain our kinked Donut Regression Discontinuity design approach using
 #### County-wide supply differences 
 
 The figure shows the application of the weighting for North Carolina. 
-
-NC has access to nine HRRs (Asheville, Charlotte, Durham, Greensboro, Greenville, Hickory, Raleigh, Wilmington, and Winston-Salem); thus each county might have ties to several hospital referral regions. In the left Figure, we show the raw weighting, and in the right conditional on county-level characteristics (residualized) from our application. 
-
-<img src="./_example/exampleNC.png" height="300">
+s
+<img src="./_simulation/simulation_figure.png" height="300">
 
 #### Country-wide quality differences 
 
