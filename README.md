@@ -55,7 +55,7 @@ sca longrun  = (_b[_cons] + _b[PostBd] + meantime + meanx -`p2'*_b[period4age]) 
 di longrun	
 	  
 sca shortrun =  _b[PostBd]
-di 	shortrun	  
+di shortrun	  
 * -----------------------------------------		  
 * Area 
 sca lower_triang =  0.5*m*(m*_b[period1age])
