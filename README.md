@@ -3,7 +3,7 @@ Replication files and simulations for Johansson et al 2023 JHE
 
 
 - Current version: `1.0.0 3feb2023`
-- Jump to: [`overview`](#overview) [`example`](#example) [`replication codes`](#replication-codes)  [`data access`](#data-access)  [`update history`](#update-history) [`authors`](#authors) [`references`](#references)
+- Jump to: [`overview`](#overview) [`simulation`](#simulation) [`replication codes`](#replication-codes)  [`data access`](#data-access)  [`update history`](#update-history) [`authors`](#authors) [`references`](#references)
 
 -----------
 
@@ -19,41 +19,50 @@ We first explain our kinked Donut Regression Discontinuity design approach using
 
 
 
-## Example
+## Simulation
 
-#### County-wide supply differences 
+#### Estimate kinked Donut  RDD
 
-The figure shows the application of the weighting for North Carolina. 
+The figure shows the data and estimated slopes for set bandwidth. 
 s
 <img src="./_simulation/simulation_figure.png" height="300">
 
-#### Country-wide quality differences 
+#### Some STATA estimation command 
 
-Across the whole country, the quality looks like this: 
-
-<img src="./_example/e1_fig_map.png" height="400">
-
-Of course, any other HRR-level characteristic can be disaggregated in the same manner. 
-
-#### Some STATA example 
-
-Here is the Stata script (see also example folder):
+Here is the Stata script (see also simulation folder):
 
 ```stata
-* change path 
-cd "˜/Hospitalcompare/_raw/"
+* Estimate OLS 
+reg y PostBd age agePostBd period1age period4age x time 
 
-* 1. Load any type of HRR data, ie. Dartmouth provides a host of measures (in our application we use individual hospital quality aggregated to the HRR-level)
-* Here for a simple example we just count the number of beds in HRR from AHA (see _sourcefiles for the source of data)
-use Dartmouth_HOSPITALRESEARCHDATA/hosp16_atlas.dta
-collapse (sum) AHAbeds , by(hrr)
+* Get parameters
+su time 
+sca meantime = r(mean)*_b[time]
+di meantime
 
-* 2. Adjust format and merge with crosswalk 
-tostring hrr, gen(hrrnum)
-merge 1:m hrrnum using ˜/crosswalk/crosswalk_county_hrr.dta, nogen
+su x 
+sca meanx = r(mean)*_b[x]
+di meanx
 
-* 3. Collapse on county-level for further analysis, using our preferred weights, others are provided
-collapse (mean) AHAbeds [aw=zip_count_weight_in_HRR] , by(countyfips)
+loc p1 =  - m
+loc p2 =    n
+
+loc start = - window
+loc end   =   window
+* -----------------------------------------		  
+* Effects 
+sca longrun  = (_b[_cons] + _b[PostBd] + meantime + meanx -`p2'*_b[period4age]) - (_b[_cons] + meantime + meanx -`p1'*_b[period1age])
+di longrun	
+	  
+sca shortrun =  _b[PostBd]
+di 	shortrun	  
+* -----------------------------------------		  
+* Area 
+sca lower_triang =  0.5*m*(m*_b[period1age])
+di lower_triang
+
+sca upper_triang =  0.5*n*(n*_b[period4age])
+di upper_triang
 ```
 
 ## Replication do-files 
