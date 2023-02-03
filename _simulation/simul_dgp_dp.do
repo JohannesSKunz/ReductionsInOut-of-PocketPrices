@@ -11,7 +11,7 @@ set seed 1
 
 * -----------------------------------------
 * Settings
-*cd "/Users/johanneskunz/Google Drive/Courses/Monash/Lecture_SoO/"
+cd "/Users/jkun0001/Documents/GitHub/ReductionsinOut-of-PocketPrices/_simulation/"
 
 sca window = 350
 sca m = 90 // upper bound hole
@@ -85,6 +85,7 @@ tw  (scatter y_mean age if t==1, m(Oh) mc(gs12) msiz(small)) ///
 		  scheme(s2mono) graphregion(color(white)) bgcolor(white) ///
 		  legend(off)
 
+		  graph export simulation_figure.png, replace 
 
 * -----------------------------------------		  
 * Effects 
