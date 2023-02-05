@@ -65,9 +65,13 @@ sca upper_triang =  0.5*n*(n*_b[period4age])
 di upper_triang
 ```
 
+In the Simulation folder, we also present an example of how to find the optimal bandwidth using a simple grit search algorithm. 
+
 ## Replication do-files 
 
-Here we collect all do-files and data used in our analysis. We do not repost the full dataset as these were too large for the Github repository, please contact us if you have issues replicating it. 
+We do not repost the full dataset as these are proprietary, they can be accessed as explained below. 
+
+We present however all data extraction files and all do files used in the main part of the analysis. 
 
 *These will be added shortly.*
 
