@@ -62,8 +62,8 @@ matrix AIC_mat=J(20,20,.)
 matrix BIC_mat=J(20,20,.)	
 matrix LL_mat=J(20,20,.)		
 
-forval m = 60(20)180  {
-	forval n = 60(20)180  {
+forval m = 60(10)180  {
+	forval n = 60(10)180  {
 	* matrix notations
 	local k=`m'/10
 	local l=`n'/10

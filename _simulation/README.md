@@ -10,7 +10,7 @@ The simulation contains two versions
 
 will provide a one-shot visualisation of the approach, generating the figure: 
 
-<img src="./_simulation/simulation_figure.png" height="300">
+<img src="simulation_figure.png" height="300">
 
 2. Step by step with finding optimal bandwidth 
 
