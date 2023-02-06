@@ -20,7 +20,7 @@ Generate data set
 Run regression
 "2_2_estmainmodel.do"
 
-Git search for optimal BW various criteria
+Grit search for optimal BW various criteria
 "2_3_findot_bw"
 
 Please let us know if you have any questions about any of these. We did not standardise this in one program as we expect adjustments to various settings will involve a fair bit of adjustment, were happy to do so however if there is demand. 
