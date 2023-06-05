@@ -114,7 +114,7 @@ The administrative data used in this study are proprietary and we would be viola
 [Johannes S Kunz](https://sites.google.com/site/johannesskunz/)
 <br>Monash University
 
-[Mikael Sevensson](https://sites.google.com/view/mikael-svensson/)
+[Mikael Svensson](https://sites.google.com/view/mikael-svensson/)
 <br>University of Florida
 
 ## References: 
