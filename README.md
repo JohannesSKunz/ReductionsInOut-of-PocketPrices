@@ -91,13 +91,13 @@ We present however all data extraction files and all do files used in the main p
 
 ## Data access
 
-The administrative data used in this study are proprietary and we would be violating ethical agreements with government authorities if we distributed the data. The data may be accessed from Swedish national and regional government authorities (Statistics Sweden, Region Västra Götaland and Region Stockholm) for researchers that (i) can show that they have ethical approval from an external body for the analyses, and (ii) submit their research plan together with a formal application to the authorities. 
+The administrative data used in this study are proprietary and we would be violating juridical and ethical agreements with government authorities if we distributed the data. The data may be accessed from Swedish national and regional government authorities (Statistics Sweden, Region Västra Götaland and Region Stockholm) for researchers that (i) can show that they have ethical approval from an external body for the analyses, and (ii) submit their research plan together with a formal application to the authorities. 
 
 ## Update History
 * **February 3, 2023**
   - initial commit
 * **June 5, 2023**
-  - added do files
+  - added files
   
 
 ## Authors:
