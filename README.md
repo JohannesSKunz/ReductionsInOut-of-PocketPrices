@@ -75,6 +75,12 @@ We present however all data extraction files and all do files used in the main p
 
 *These will be added shortly.*
 
+* Generate working dataset
+
+"1. data set base.do"
+*** in this dofile, I set up the structure for the data set "cells_1y_base.dta". 730 observations per individual, one observation per day in relation to the 85th birthday.
+
+
 ## Data access
 
 *Description will be added shortly.*
